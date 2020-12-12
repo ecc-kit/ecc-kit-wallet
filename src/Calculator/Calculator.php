@@ -16,7 +16,7 @@ interface Calculator
      *
      * @return Money
      */
-    public static function add(Money ...$monies): Money;
+    public function add(Money ...$monies): Money;
     
     /**
      * Subtraction.
@@ -25,7 +25,7 @@ interface Calculator
      *
      * @return Money
      */
-    public static function sub(Money ...$monies): Money;
+    public function sub(Money ...$monies): Money;
     
     /**
      * Multiplication.
@@ -35,7 +35,7 @@ interface Calculator
      *
      * @return Money
      */
-    public static function mul(Money $money, float $value): Money;
+    public function mul(Money $money, float $value): Money;
     
     /**
      * Division.
@@ -45,5 +45,5 @@ interface Calculator
      *
      * @return Money
      */
-    public static function div(Money $money, float $value): Money;
+    public function div(Money $money, float $value): Money;
 }

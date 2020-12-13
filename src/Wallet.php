@@ -5,6 +5,7 @@ namespace EccKit\Wallet;
 use EccKit\Money\Collection\MoneyCollection;
 use EccKit\Money\Currency;
 use EccKit\Money\Money;
+use EccKit\Money\MoneyFactory;
 use EccKit\Wallet\Calculator\Calculator;
 use EccKit\Exchanger\Exchanger;
 
@@ -13,10 +14,8 @@ use EccKit\Exchanger\Exchanger;
  */
 class Wallet
 {
-    /** @var Currency Currency */
-    protected Currency $currency;
-    /** @var Calculator Calculator */
-    protected Calculator $calculator;
+    /** @var MoneyFactory MoneyFactory */
+    protected MoneyFactory $moneyFactory;
     /** @var Exchanger Exchanger */
     protected Exchanger $exchanger;
     /** @var array Money */
@@ -25,17 +24,14 @@ class Wallet
     /**
      * Wallet constructor.
      *
-     * @param Currency   $currency   Base Currency
-     * @param Calculator $calculator Calculator
-     * @param Exchanger  $exchanger  Exchanger
+     * @param MoneyFactory $moneyFactory Calculator
+     * @param Exchanger    $exchanger    Exchanger
      */
     public function __construct(
-        Currency $currency,
-        Calculator $calculator,
+        MoneyFactory $moneyFactory,
         Exchanger $exchanger
     ) {
-        $this->currency = $currency;
-        $this->calculator = $calculator;
+        $this->moneyFactory = $moneyFactory;
         $this->exchanger = $exchanger;
     }
     

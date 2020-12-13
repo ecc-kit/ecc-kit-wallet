@@ -1,1 +1,3 @@
-# ecc-lit-wallet
+# ecc-kit-wallet
+
+IN PROGRESS...
